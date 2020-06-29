@@ -1,3 +1,5 @@
+echo "Hi rob!"
+
 ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
@@ -14,8 +16,10 @@ source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed (To manage your Ruby versions)
-export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
-type -a rbenv > /dev/null && eval "$(rbenv init -)"
+# export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
+export PATH="${HOME}/.rbenv/shims:${PATH}"
+eval "$(rbenv init -)"
+# type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (To manage your Python versions)
 export PATH="${HOME}/.pyenv/bin:${PATH}" # Needed for Linux/WSL
@@ -40,5 +44,6 @@ pyenv activate lewagon 2>/dev/null && echo "🐍 Loading 'lewagon' virtualenv"
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
