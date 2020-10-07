@@ -25,6 +25,7 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
+		"ColorHighlight",
 		"Vintage"
 	],
 	"remember_open_files": false,
